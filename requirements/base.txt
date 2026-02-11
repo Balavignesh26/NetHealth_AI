@@ -1,8 +1,11 @@
 pandas
 numpy
-scikit-learn
-pyyaml
 pydantic
+scikit-learn
 networkx
 streamlit
+pytest
+jupyter
+matplotlib
 plotly
+graphviz

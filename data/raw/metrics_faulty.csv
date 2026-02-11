@@ -1,0 +1,8 @@
+timestamp,asset_id,metric_name,value,unit
+2023-10-27 10:05:00,core-sw,crc_error,0,count
+2023-10-27 10:05:00,dist-sw,crc_error,0,count
+2023-10-27 10:05:00,edge-sw-a,crc_error,500,count
+2023-10-27 10:05:00,edge-sw-b,crc_error,0,count
+2023-10-27 10:05:00,plc-1,packet_loss,25,percent
+2023-10-27 10:05:00,plc-2,packet_loss,30,percent
+2023-10-27 10:05:00,hmi-1,latency,12,ms

@@ -1,22 +1,11 @@
-# python 
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .env
 .venv
+env/
 venv/
-
-# OS
-.DS_Store
-
-# IDE
 .vscode/
 .idea/
-
-# Data outpus
-data/processed/
-data/alerts/
-
-# Docker
 *.log

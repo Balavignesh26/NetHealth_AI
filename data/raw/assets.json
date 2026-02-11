@@ -1,0 +1,65 @@
+[
+    {
+        "id": "core-sw",
+        "name": "Core Switch (L3)",
+        "type": "switch",
+        "role": "core",
+        "parent_id": null
+    },
+    {
+        "id": "dist-sw",
+        "name": "Distribution Switch",
+        "type": "switch",
+        "role": "distribution",
+        "parent_id": "core-sw"
+    },
+    {
+        "id": "edge-sw-a",
+        "name": "Edge Switch A",
+        "type": "switch",
+        "role": "edge",
+        "parent_id": "dist-sw"
+    },
+    {
+        "id": "edge-sw-b",
+        "name": "Edge Switch B",
+        "type": "switch",
+        "role": "edge",
+        "parent_id": "dist-sw"
+    },
+    {
+        "id": "plc-1",
+        "name": "Assembly PLC 1",
+        "type": "plc",
+        "role": "controller",
+        "parent_id": "edge-sw-a"
+    },
+    {
+        "id": "plc-2",
+        "name": "Assembly PLC 2",
+        "type": "plc",
+        "role": "controller",
+        "parent_id": "edge-sw-a"
+    },
+    {
+        "id": "hmi-1",
+        "name": "Line HMI",
+        "type": "hmi",
+        "role": "interface",
+        "parent_id": "edge-sw-b"
+    },
+    {
+        "id": "firewall-1",
+        "name": "Perimeter Firewall",
+        "type": "firewall",
+        "role": "security",
+        "parent_id": "core-sw"
+    },
+    {
+        "id": "server-1",
+        "name": "App Server",
+        "type": "server",
+        "role": "application",
+        "parent_id": "core-sw"
+    }
+]

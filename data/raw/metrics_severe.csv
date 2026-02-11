@@ -1,0 +1,17 @@
+timestamp,asset_id,metric_name,value
+2023-10-27T10:00:00,core-sw,cpu_usage,95.0
+2023-10-27T10:00:00,core-sw,memory_usage,92.0
+2023-10-27T10:00:00,core-sw,temperature,75.0
+2023-10-27T10:00:00,edge-sw-a,cpu_usage,88.0
+2023-10-27T10:00:00,edge-sw-a,memory_usage,85.0
+2023-10-27T10:00:00,edge-sw-a,temperature,65.0
+2023-10-27T10:00:00,plc-1,cycle_time,55.0
+2023-10-27T10:00:00,plc-1,error_count,150.0
+2023-10-27T10:00:00,hmi-1,response_time,450.0
+2023-10-27T10:00:00,firewall-1,throughput,1200.0
+2023-10-27T10:00:00,firewall-1,dropped_packets,3000.0
+2023-10-27T10:00:00,server-1,cpu_usage,99.0
+2023-10-27T10:00:00,server-1,memory_usage,98.0
+2023-10-27T10:00:00,server-1,disk_io,99.0
+2023-10-27T10:00:00,server-1,retransmissions,500.0
+2023-10-27T10:00:00,server-1,connection_resets,200.0
