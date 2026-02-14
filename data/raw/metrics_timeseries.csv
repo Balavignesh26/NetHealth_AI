@@ -6,3 +6,4 @@ timestamp,asset_id,metric_name,value,unit
 2023-10-27 10:00:00,plc-1,packet_loss,0,percent
 2023-10-27 10:00:00,plc-2,packet_loss,0,percent
 2023-10-27 10:00:00,hmi-1,latency,10,ms
+

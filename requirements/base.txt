@@ -9,3 +9,5 @@ jupyter
 matplotlib
 plotly
 graphviz
+statsmodels
+pgmpy

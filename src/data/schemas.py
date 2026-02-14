@@ -41,3 +41,25 @@ class RootCause(BaseModel):
     probability: float
     description: str
     recommended_action: str
+
+class ThermalState(BaseModel):
+    """Real-time thermal state of a network component"""
+    asset_id: str
+    timestamp: datetime
+    ambient_temp_c: float
+    operating_temp_c: float
+    resistance_ohm: float
+    snr_db: float
+    ber: float
+    traffic_load_mbps: float
+
+class FailurePrediction(BaseModel):
+    """Physics-based failure prediction"""
+    asset_id: str
+    timestamp: datetime
+    confidence: float  # 0-1
+    days_remaining: Optional[float]
+    failure_probability: float
+    recommended_action: str
+    thermal_state: Optional[Dict[str, Any]] = None  # ThermalState as dict
+    prediction_type: str = "thermal_physics"
