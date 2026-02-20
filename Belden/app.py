@@ -51,7 +51,7 @@ else:
     st.session_state.data_source.set_scenario("emi_interference")
 
 st.sidebar.markdown("---")
-st.sidebar.caption("10-step AI-driven diagnostic workflow for industrial networks.")
+st.sidebar.subheader("AI Assistant")
 
 # --- SIDEBAR: AI ASSISTANT (placed after data is computed, injected via session_state) ---
 if 'chat_history' not in st.session_state:
@@ -315,9 +315,6 @@ for item in plan:
 st.markdown("---")
 st.caption("Developed for Belden Industrial AI. Prototype v1.0")
 
-# ── SIDEBAR: AI ASSISTANT ──────────────────────────────────────────────
-st.sidebar.markdown("---")
-st.sidebar.subheader("AI Assistant")
 
 def _ai_respond(user_msg: str) -> str:
     """Rule-based AI assistant that answers using live diagnosis data."""
@@ -442,6 +439,7 @@ if st.sidebar.button("Send", use_container_width=True) and user_input.strip():
     reply = _ai_respond(user_input.strip())
     st.session_state.chat_history.append({"role": "assistant", "text": reply})
     st.rerun()
+
 
 
 
