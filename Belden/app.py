@@ -313,7 +313,7 @@ for item in plan:
         st.write(f"**If Confirmed:** {item['confirmation']}")
 
 st.markdown("---")
-st.caption("Developed for Belden Industrial AI. Prototype v1.0")
+st.caption("v1.3")
 
 
 def _ai_respond(user_msg: str) -> str:
@@ -439,6 +439,7 @@ if st.sidebar.button("Send", use_container_width=True) and user_input.strip():
     reply = _ai_respond(user_input.strip())
     st.session_state.chat_history.append({"role": "assistant", "text": reply})
     st.rerun()
+
 
 
 
