@@ -11,7 +11,7 @@ from modules.topology import NetworkTopology
 from modules.thermal_model import ThermalPredictionModel
 from modules.recommendations import RecommendationEngine
 import plotly.express as px
-import plotly.graph_objects as go go
+import plotly.graph_objects as go 
 
 # Page Config
 st.set_page_config(page_title="Belden AI Network Diagnostics", layout="wide")
@@ -442,6 +442,7 @@ if st.sidebar.button("Send", use_container_width=True) and user_input.strip():
     reply = _ai_respond(user_input.strip())
     st.session_state.chat_history.append({"role": "assistant", "text": reply})
     st.rerun()
+
 
 
 
