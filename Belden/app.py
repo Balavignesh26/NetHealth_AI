@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import time
 import datetime
+import os
 from modules.data_source import SyntheticDataSource
 from modules.kpi_engine import KPICalculator
 from modules.ai_diagnostics import AIDiagnostics
@@ -10,7 +11,7 @@ from modules.topology import NetworkTopology
 from modules.thermal_model import ThermalPredictionModel
 from modules.recommendations import RecommendationEngine
 import plotly.express as px
-import plotly.graph_objects as go
+import plotly.graph_objects as go go
 
 # Page Config
 st.set_page_config(page_title="Belden AI Network Diagnostics", layout="wide")
@@ -34,7 +35,7 @@ st.title("Network Diagnostics AI Prototype")
 st.markdown("---")
 
 # --- SIDEBAR: LOGO ---
-_logo_path = Path(__file__).parent / "belden-logo.jpeg"
+_logo_path = os.path.join(os.path.dirname(__file__), "belden-logo.jpeg")
 try:
     st.sidebar.image(str(_logo_path), use_container_width=True)
 except Exception:
@@ -441,5 +442,6 @@ if st.sidebar.button("Send", use_container_width=True) and user_input.strip():
     reply = _ai_respond(user_input.strip())
     st.session_state.chat_history.append({"role": "assistant", "text": reply})
     st.rerun()
+
 
 
