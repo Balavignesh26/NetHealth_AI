@@ -31,7 +31,7 @@ if 'recommendations' not in st.session_state:
     st.session_state.recommendations = RecommendationEngine()
 
 # --- HEADER ---
-st.title("Network Diagnostics AI Prototype")
+st.title("NetHealth Prototype")
 st.markdown("---")
 
 # --- SIDEBAR: LOGO ---
@@ -439,6 +439,7 @@ if st.sidebar.button("Send", use_container_width=True) and user_input.strip():
     reply = _ai_respond(user_input.strip())
     st.session_state.chat_history.append({"role": "assistant", "text": reply})
     st.rerun()
+
 
 
 
