@@ -34,7 +34,11 @@ st.title("Network Diagnostics AI Prototype")
 st.markdown("---")
 
 # --- SIDEBAR: LOGO ---
-st.sidebar.image("belden-logo.jpeg", use_container_width=True)
+_logo_path = Path(__file__).parent / "belden-logo.jpeg"
+try:
+    st.sidebar.image(str(_logo_path), use_container_width=True)
+except Exception:
+    st.sidebar.markdown("**Belden AI Network Diagnostics**")
 st.sidebar.markdown("---")
 st.sidebar.header("Simulation Controls")
 scenario = st.sidebar.selectbox("Current Scenario", ["Normal Operation", "Cable Failure", "EMI Interference"])
@@ -437,4 +441,5 @@ if st.sidebar.button("Send", use_container_width=True) and user_input.strip():
     reply = _ai_respond(user_input.strip())
     st.session_state.chat_history.append({"role": "assistant", "text": reply})
     st.rerun()
+
 
